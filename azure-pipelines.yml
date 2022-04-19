@@ -70,3 +70,5 @@ stages:
               appType: webAppLinux
               appName: $(webAppName)
               package: '$(System.ArtifactsDirectory)/drop/**/target/*.?(war|jar)'
+              
+          - task: PublishBuildArtifacts@1
