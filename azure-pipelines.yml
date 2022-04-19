@@ -70,3 +70,9 @@ stages:
               appType: webAppLinux
               appName: $(webAppName)
               package: '$(System.ArtifactsDirectory)/drop/**/target/*.?(war|jar)'
+              
+          steps:
+         - task: PublishPipelineArtifact@1
+           inputs:
+           targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
+           artifactName: WebApp
